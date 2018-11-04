@@ -17,7 +17,7 @@ class DoSomething
 	end
 	
 	def some_block(choice, &theblock)
-		puts 'no block given' unless block_given?
+		return 'no block given' unless block_given?
 		puts "block follows:"
 		if choice == 'blue' || choice == 'b'
 			theblock.call(self.choice)
@@ -33,5 +33,4 @@ print 'pick red or blue: '
 entry = gets.chomp.to_s
 
 X = DoSomething.new(entry)
-X.choice
 X.some_block(entry) { |e| print "selected #{e}."}
