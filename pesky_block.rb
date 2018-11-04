@@ -5,7 +5,6 @@ class DoSomething
 	attr_reader :choice
 	
 	def choice=(choice)
-		print 'enter red or blue'
 		if choice ==''
 			raise 'choice can\'t be blank'
 		end
