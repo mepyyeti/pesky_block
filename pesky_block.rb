@@ -19,9 +19,9 @@ class DoSomething
 		return 'no block given' unless block_given?
 		puts "block follows:"
 		if choice == 'blue' || choice == 'b'
-			theblock.call(self.choice)
+			theblock.call(@choice)
 		elsif choice == 'red' || choice == 'r'
-			theblock.call(self.choice)
+			theblock.call(@choice)
 		else
 			print "good bye"
 		end
